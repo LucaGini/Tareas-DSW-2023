@@ -1,0 +1,19 @@
+{
+  "name": "web-server",
+  "version": "1.0.0",
+  "description": "web-server software development homework",
+  "main": "http.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "\"js\"",
+    "\"http-server\"",
+    "\"ds\""
+  ],
+  "author": "\"Luca Gini\"",
+  "license": "MIT",
+  "dependencies": {
+    "http": "^0.0.1-security"
+  }
+}

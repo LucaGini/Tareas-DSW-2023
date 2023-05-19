@@ -1,12 +1,13 @@
 'use strict'
 
-function prototypesChain(obj){
+const protoChain = (obj) => {
   let testObject = obj;
   while (Object.getPrototypeOf(testObject) !== null){
     console.log(testObject);
     testObject = Object.getPrototypeOf(testObject);
 
   }
+  console.log('null');
 }
 
 class Person{
@@ -18,4 +19,4 @@ class Person{
 
 let persona = new Person();
 
-prototypesChain(persona);
+protoChain(persona);

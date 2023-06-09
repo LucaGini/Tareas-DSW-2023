@@ -40,7 +40,8 @@ class House extends Property{
   }
 
   getPrice(){
-    this.getPrice() * this.roomQtty * PriceSpecs.roomPriceMultiplier;
+    let p = this.getPrice() * this.roomQtty * PriceSpecs.roomPriceMultiplier;
+    return p;
   }
 }
 
@@ -51,7 +52,8 @@ class Garage extends Property{
   }
 
   getPrice(){
-    this.getPrice() + (this.parkingSpaces * PriceSpecs.parkingSpaceTraditional);
+    let p = this.getPrice() + (this.parkingSpaces * PriceSpecs.parkingSpaceTraditional);
+    return p;
   }
 }
 

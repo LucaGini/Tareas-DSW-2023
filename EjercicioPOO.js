@@ -18,10 +18,11 @@ class PriceSpecs{
 }
 
 class Property{
-  constructor(idProp, address, m2){
+  constructor(idProp, address, m2, Owner){
     this.idProp = idProp;
     this.address = address;
     this.m2 = m2;
+    this.Owner = Owner;
   };
 
   getPrice(){
@@ -32,6 +33,9 @@ class Property{
     this.getPrice() * PriceSpecs.commission;
   }
 }
+
+/*p = new Property(1, "mendoza 456", 100, );
+p.getPrice();*/
 
 class House extends Property{
   constructor(idProp, address, m2, roomQtty){
@@ -58,17 +62,31 @@ class Garage extends Property{
 }
 
 /*class Office extends Property{
-  constructor(idProp, address, m2, services[]){
+  constructor(idProp, address, m2, arrayServices[]){
       super(idProp, address, m2);
-      this.services = {
-        idS
+      //this.arrayServices[] = arrayServices;
       }
   }
 
   getPrice(){
-    this.getPrice() * this.roomQtty * PriceSpecs.roomPriceMultiplier;
+    let sum = arrayServices.forEach(s => {
+      sum = sum + s.price;
+    });
+    let p = this.getPrice() * sum;
   }
-}*/
+
+
+class Services{
+  constructor(idService, price, description, Office){
+    this.idService = idService;
+    this.price = price;
+    this.description = description;
+    this.Office = Office;
+  }
+}
+
+let arrServices = [serv1, serv2, ...]
+*/
 
 
 

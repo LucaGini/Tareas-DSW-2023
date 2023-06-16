@@ -56,7 +56,7 @@ class Garage extends Property{
   }
 
   getPrice(){
-    let p = this.getPrice() + (this.parkingSpaces * PriceSpecs.parkingSpaceTraditional);
+    let p = super.getPrice() + (this.parkingSpaces * PriceSpecs.parkingSpaceTraditional);
     return p;
   }
 }
@@ -69,10 +69,11 @@ class Garage extends Property{
   }
 
   getPrice(){
+    if(arrayServices.lenght() != 0){
     let sum = arrayServices.forEach(s => {
       sum = sum + s.price;
     });
-    let p = this.getPrice() * sum;
+    let p = super.getPrice() * sum;}
   }
 
 

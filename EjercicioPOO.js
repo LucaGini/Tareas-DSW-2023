@@ -88,6 +88,41 @@ class Services{
 
 let arrServices = [serv1, serv2, ...]
 */
+---
+index.ts
+import{ Game}from " ./Game.js"
+  const = atila {
+  id:1
+  name: " atila" 
+  }
+ const = morgan {
+  id:2
+  name: "morgan le fey" 
+  }
+
+console.log(atila)
+console.log(morgan)
+
+const round1 = new Game(atila, morgan)
+round1.nextStage(); 
+
+cosole.log(round1.nextStageCharacter())
+---
+//game.ts
+export class Game { 
+  privante startingCharacter: number;
+  contructor(public character1: any, public character2:any ){         //asume que es una prop, pero no puede advinar que es /,para que no tire error ANY ENEMIGO
+    if(randomInt(0,2), (number)=> {
+      this.startingCharacter = number;
+      }
+  }            
+}
+
+ this.startingCharacter = randomInt(2)
 
 
-
+nextStageCharacter(){
+if(this.startingCharacter == 0){
+  return this.character1}
+else{return this.character2}
+}
